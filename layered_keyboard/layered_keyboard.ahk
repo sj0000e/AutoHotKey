@@ -91,7 +91,7 @@ $LControl:: ; short tap trigger
 
 $Lshift:: ; short tap trigger
   Send,{Lshift Down} 
-  KeyWait, Lshift, t0.15 ; t0.x = short click time
+  KeyWait, Lshift, t0.1 ; t0.x = short click time
   If ErrorLevel  {
     KeyWait, Lshift
   }
