@@ -128,7 +128,7 @@ $Rshift:: ; short tap trigger
   !u::
   Send, {LAlt Up}{LButton Down}
   KeyWait, u ; for drag
-  Send, {LAlt Down}{LButton Up}
+  Send, {LButton Up}{LAlt Down}
   return  
   !o::Send, {LAlt Up}{RButton}{LAlt Down}
   !p::Send, {LAlt Up}{MButton}{LAlt Down}
