@@ -132,8 +132,8 @@ $Rshift:: ; short tap trigger
   return  
   !o::Send, {LAlt Up}{RButton}{LAlt Down}
   !p::Send, {LAlt Up}{MButton}{LAlt Down}
-  !y::WheelUp
-  !h::WheelDown
+  !y::Send, {LAlt Up}{WheelUp}{LAlt Down}
+  !h::Send, {LAlt Up}{WheelDown}{LAlt Down}
   
   !j:: ; left mouse
   !i:: ; up
@@ -147,7 +147,9 @@ $Rshift:: ; short tap trigger
     if(mouse_move_distance  < mouse_move_max_distance){
       mouse_move_distance := (mouse_move_max_distance-mouse_move_distance)*mouse_move_accelation_ratio + mouse_move_distance  
     }
-  } Else{
+  } Else If(mouse_move_interval < 300)   {
+    mouse_move_distance := mouse_move_distance*2
+  } Else {
     mouse_move_distance := mouse_move_distance_start
   }
     
