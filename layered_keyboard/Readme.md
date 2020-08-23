@@ -15,17 +15,4 @@
   ![layer_number](https://github.com/sj0000e/AutoHotKey/blob/master/layered_keyboard/layer_number.png) 
   
 
-@startuml
-[*]->layer_normal
-layer_normal --> layer_vim_normal : Rshift
-layer_normal : Always LCtrl(Short)
-layer_vim_normal --> layer_normal : LCtrl
-layer_vim_normal : Special layer
-layer_vim_normal : Always Rshift(Short)
-
-layer_vim_normal --> layer_mouse : LShift
-layer_mouse : Special layer
-layer_vim_normal --> layer_number : Tab
-layer_number : Special layer
-layer_mouse --> layer_number : Tab
-@enduml
+![example-uml](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/sj0000e/AutoHotKey/master/layered_keyboard/layer.uml)
